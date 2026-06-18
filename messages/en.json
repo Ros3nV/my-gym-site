@@ -1,0 +1,165 @@
+{
+  "common": {
+    "bookCta": "Book Your Private Session",
+    "bookShort": "Book",
+    "exploreLocations": "Explore Locations",
+    "bookThisLocation": "Book this location"
+  },
+  "nav": {
+    "home": "Home",
+    "locations": "Locations",
+    "reviews": "Reviews",
+    "howToBook": "How to Book",
+    "faq": "Rules & FAQ",
+    "contacts": "Contacts",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "hero": {
+    "title": "Your gym. Yours alone.",
+    "subtitle": "Rent a fully private, automated gym by the hour — no crowds, no waiting, no membership.",
+    "imageAlt": "Bright private power-rack room with mirror and dumbbells"
+  },
+  "heroAlt": {
+    "two": { "title": "Train in total privacy.", "subtitle": "Book a slot, unlock with a code, and own the entire space — alone, with a friend, or your trainer." },
+    "three": { "title": "The whole gym, just for you.", "subtitle": "Premium private fitness on your schedule. Walk in, work out, walk out — on your terms." }
+  },
+  "concept": {
+    "title": "Why MyGym",
+    "imageAlt": "Premium lounge with ring chandelier and designer chairs",
+    "bullets": [
+      "100% privacy",
+      "No crowds, no equipment queues",
+      "Premium hygiene between sessions",
+      "Control your own music & atmosphere",
+      "Seamless automated access (24/7)"
+    ]
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "imageAlt": "Frosted glass etched \"PRIVATE 24/7\"",
+    "steps": [
+      { "title": "Book a slot", "body": "Choose your gym, date and time online." },
+      { "title": "Get your access code", "body": "A unique PIN arrives for your session." },
+      { "title": "Train privately", "body": "The whole space is yours; lock up and leave when done." }
+    ]
+  },
+  "homeCta": {
+    "phrase": "Your private gym awaits.",
+    "button": "Book Now"
+  },
+  "locations": {
+    "title": "Our Plovdiv locations",
+    "subtitle": "Three private studios across the city — yours by the hour.",
+    "labels": {
+      "address": "Address",
+      "phone": "Phone",
+      "hours": "Hours",
+      "amenities": "Amenities",
+      "mapTitle": "Map of {name}"
+    },
+    "items": [
+      {
+        "id": "center",
+        "name": "MyGym Center",
+        "area": "Plovdiv Center (ул. Отец Паисий area)",
+        "description": "A private studio steps from the city center — premium kit, marble-clean finish, perfect for a focused solo or duo session.",
+        "address": "ул. Отец Паисий, Център, Пловдив",
+        "phone": "+359 88 000 0001",
+        "hours": "24/7",
+        "amenities": ["Power rack", "Dumbbells to 50 kg", "Cardio", "Bluetooth sound", "Shower", "Free parking"]
+      },
+      {
+        "id": "kapana",
+        "name": "MyGym Kapana",
+        "area": "Kapana creative district",
+        "description": "In the heart of Kapana — strength, cardio and functional gear in a stylish private space, yours by the hour.",
+        "address": "Капана, Пловдив",
+        "phone": "+359 88 000 0002",
+        "hours": "06:00–24:00",
+        "amenities": ["Power rack", "Dumbbells to 40 kg", "Functional rig", "Bluetooth sound", "Shower"]
+      },
+      {
+        "id": "trakiya",
+        "name": "MyGym Trakiya",
+        "area": "Trakiya residential district",
+        "description": "Your neighborhood private gym in Trakiya — fully equipped, spotless, and never crowded.",
+        "address": "Тракия, Пловдив",
+        "phone": "+359 88 000 0003",
+        "hours": "24/7",
+        "amenities": ["Power rack", "Full dumbbell set", "Cardio", "Bluetooth sound", "Shower", "Free parking"]
+      }
+    ]
+  },
+  "reviews": {
+    "title": "What our members say",
+    "subtitle": "Real feedback from people who train privately at MyGym.",
+    "memberLabel": "Verified member",
+    "items": [
+      { "text": "Great atmosphere and top-notch equipment! Highly recommend.", "rating": 5 },
+      { "text": "The cleanest gym I've ever been to. Friendly staff too.", "rating": 5 },
+      { "text": "Love the booking system, it's never too crowded.", "rating": 5 },
+      { "text": "Excellent trainers and a very motivating environment.", "rating": 5 },
+      { "text": "Top tier facilities. The community here is fantastic.", "rating": 5 },
+      { "text": "Super convenient location and always tidy.", "rating": 4 },
+      { "text": "The perfect place to focus on my fitness goals.", "rating": 5 },
+      { "text": "High-quality machines and great music playlist.", "rating": 5 },
+      { "text": "Staff is incredibly helpful and welcoming.", "rating": 4 },
+      { "text": "Best gym experience in town, hands down.", "rating": 5 },
+      { "text": "A wonderful community and great equipment selection.", "rating": 5 }
+    ]
+  },
+  "howToBook": {
+    "title": "How to Book",
+    "intro": "Booking your private session takes just a few steps using the Octiv Fitness app.",
+    "steps": [
+      "Download the Octiv Fitness mobile application from the App Store or Google Play Store.",
+      "Open the app and log in or create your personal member account.",
+      "Search for our gym within the app's facility directory.",
+      "Choose your preferred training session, date, and time slot.",
+      "Confirm your reservation and arrive ready for your workout!"
+    ]
+  },
+  "faq": {
+    "title": "Rules & FAQ",
+    "rulesHeading": "Gym Rules",
+    "rules": [
+      "Always use a clean towel on the equipment during exercises.",
+      "Re-rack all weights and return equipment to its proper place after use.",
+      "Proper athletic footwear and apparel must be worn at all times.",
+      "Respect other members and maintain an appropriate noise level."
+    ],
+    "faqHeading": "Frequently asked questions",
+    "items": [
+      { "q": "How do I enter the gym once I book a session?", "a": "After booking you receive a unique digital PIN code. Enter it on the keypad at your slot's start time to unlock the door — no staff, no keys, fully automated." },
+      { "q": "Can I bring a friend or a personal trainer?", "a": "Yes. You rent the entire space, so you can train alone, bring a friend, or come with your personal trainer at no extra charge — it's your private session." },
+      { "q": "How is hygiene maintained between sessions?", "a": "We schedule a cleaning and sanitization window between every booking, so the equipment and floor are professionally wiped down and ready before you arrive." },
+      { "q": "What equipment is available?", "a": "Each private gym includes a power rack and barbell, a full dumbbell set, benches, cardio machines, kettlebells and functional accessories — everything for a complete strength or conditioning workout." },
+      { "q": "Can I play my own music?", "a": "Absolutely. Every space has an integrated Bluetooth sound system — connect your phone and set the atmosphere exactly how you like it." }
+    ]
+  },
+  "contacts": {
+    "title": "Contacts",
+    "intro": "For any questions, do not hesitate to contact us at:",
+    "labels": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "phone": "+359 88 123 4567",
+    "email": "hello@mygym.bg",
+    "address": "23 Otets Paisiy St, Plovdiv 4000, Bulgaria",
+    "imageAlt": "Premium MyGym private studio interior"
+  },
+  "footer": {
+    "tagline": "MyGym — private automated fitness in Plovdiv.",
+    "rights": "All rights reserved.",
+    "social": { "instagram": "Instagram", "facebook": "Facebook" }
+  },
+  "seo": {
+    "title": "MyGym — Private Automated Gym Rental in Plovdiv",
+    "description": "Rent a fully private, automated gym by the hour in Plovdiv. No crowds, no membership — book a slot, unlock with a code, train alone."
+  }
+}
