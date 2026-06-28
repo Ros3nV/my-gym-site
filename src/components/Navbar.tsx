@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { Button } from "@/components/ui/Button";
+import { BookButton } from "@/components/BookButton";
 import { Container } from "@/components/ui/Container";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { NAV_LINKS } from "@/config/nav";
@@ -14,7 +14,6 @@ import { cn } from "@/lib/cn";
 
 export function Navbar() {
   const t = useTranslations("nav");
-  const tc = useTranslations("common");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -62,9 +61,7 @@ export function Navbar() {
           {/* BG/EN switcher + Book CTA — pinned to the right edge (Point N). */}
           <div className="ml-auto hidden items-center gap-6 lg:flex">
             <LanguageToggle />
-            <Button href="/how-to-book" variant="primary">
-              {tc("bookShort")}
-            </Button>
+            <BookButton variant="primary" />
           </div>
 
           <button
@@ -99,9 +96,7 @@ export function Navbar() {
               ))}
               <div className="flex items-center justify-between px-2 pt-3">
                 <LanguageToggle />
-                <Button href="/how-to-book" variant="primary">
-                  {tc("bookShort")}
-                </Button>
+                <BookButton variant="primary" />
               </div>
             </nav>
           </Container>

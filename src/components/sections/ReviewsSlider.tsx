@@ -2,11 +2,7 @@ import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { StarRating } from "@/components/StarRating";
 import { Avatar } from "@/components/Avatar";
-
-interface Review {
-  text: string;
-  rating: number;
-}
+import { REVIEWS } from "@/data/reviews";
 
 const VISIBLE_COUNT = 6; // pull up to 6 reviews into the marquee pool
 
@@ -18,10 +14,14 @@ const VISIBLE_COUNT = 6; // pull up to 6 reviews into the marquee pool
  * in globals.css), so the seam is invisible and the loop never visibly rewinds.
  * Card widths are sized so at most four reviews are on screen at once. The
  * animation is pure CSS and is disabled for `prefers-reduced-motion` users.
+ *
+ * Reviews are the real, imported testimonials from {@link REVIEWS}
+ * (corrections7 §1): each card shows the member's real name and photo, falling
+ * back to the default avatar when a review has no photo.
  */
 export function ReviewsSlider() {
   const t = useTranslations("reviews");
-  const items = (t.raw("items") as Review[]).slice(0, VISIBLE_COUNT);
+  const items = REVIEWS.slice(0, VISIBLE_COUNT);
   // Duplicate the pool so the -50% translate lands on a seamless repeat.
   const track = [...items, ...items];
 
@@ -43,17 +43,17 @@ export function ReviewsSlider() {
             // Cards are wider than they are tall (corrections5 §3): horizontal
             // rectangles rather than squares. The wider width also keeps at most
             // ~4 reviews on screen at once.
-            <li key={i} className="w-[22rem] shrink-0 px-3 sm:w-[26rem]">
+            <li key={`${review.id}-${i}`} className="w-[22rem] shrink-0 px-3 sm:w-[26rem]">
               <figure className="flex h-full flex-col items-center justify-center gap-3 rounded-3xl border border-ink/10 bg-surface px-8 py-6 text-center shadow-sm">
                 <StarRating rating={review.rating} />
-                <blockquote className="text-lg text-ink-soft">“{review.text}”</blockquote>
-                {/* Avatar and "Verified Member" label share one centered row so
-                    they sit on exactly the same horizontal axis (corrections5 §3). */}
+                <blockquote className="line-clamp-5 text-lg text-ink-soft">
+                  “{review.text}”
+                </blockquote>
+                {/* Avatar and member name share one centered row so they sit on
+                    exactly the same horizontal axis (corrections5 §3). */}
                 <figcaption className="mt-1 flex items-center justify-center gap-3">
-                  <Avatar size={40} className="shrink-0" />
-                  <span className="text-sm font-semibold leading-none text-ink">
-                    {t("memberLabel")}
-                  </span>
+                  <Avatar src={review.avatar} alt={review.author} size={40} className="shrink-0" />
+                  <span className="text-sm font-semibold text-ink">{review.author}</span>
                 </figcaption>
               </figure>
             </li>

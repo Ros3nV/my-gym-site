@@ -48,66 +48,67 @@
     "phrase": "Your private gym awaits.",
     "button": "Book Now"
   },
+  "booking": {
+    "ariaLabel": "Choose a location to book",
+    "title": "Choose a location",
+    "close": "Close",
+    "locations": {
+      "stochna": "Stochna Gara",
+      "karshiyaka": "Karshiyaka"
+    }
+  },
   "locations": {
     "title": "Our Plovdiv locations",
-    "subtitle": "Three private studios across the city — yours by the hour.",
+    "subtitle": "Two private studios across the city — yours by the hour.",
     "labels": {
       "address": "Address",
       "phone": "Phone",
       "hours": "Hours",
       "amenities": "Amenities",
-      "mapTitle": "Map of {name}"
+      "mapTitle": "Map of {name}",
+      "viewGallery": "View Gallery",
+      "comingSoon": "Coming Soon",
+      "galleryClose": "Close gallery",
+      "galleryPrev": "Previous photo",
+      "galleryNext": "Next photo",
+      "galleryCounter": "Photo {index} of {total}"
     },
     "items": [
       {
-        "id": "center",
-        "name": "MyGym Center",
-        "area": "Plovdiv Center (ул. Отец Паисий area)",
-        "description": "A private studio steps from the city center — premium kit, marble-clean finish, perfect for a focused solo or duo session.",
-        "address": "ул. Отец Паисий, Център, Пловдив",
+        "id": "karshiyaka",
+        "name": "MyGym Karshiyaka",
+        "area": "Ul. \"Pobeda\" 9, Plovdiv",
+        "description": "A private studio in Karshiyaka — premium kit, marble-clean finish, perfect for a focused solo or duo session.",
+        "address": "Ул. \"Победа\" 9, гр. Пловдив",
         "phone": "+359 88 000 0001",
         "hours": "24/7",
         "amenities": ["Power rack", "Dumbbells to 50 kg", "Cardio", "Bluetooth sound", "Shower", "Free parking"]
       },
       {
-        "id": "kapana",
-        "name": "MyGym Kapana",
-        "area": "Kapana creative district",
-        "description": "In the heart of Kapana — strength, cardio and functional gear in a stylish private space, yours by the hour.",
-        "address": "Капана, Пловдив",
+        "id": "stochna",
+        "name": "MyGym Stochna Gara",
+        "area": "Bul. \"Naycho Tsanov\" 5, Plovdiv",
+        "description": "Your private gym by Stochna Gara — fully equipped, spotless, and never crowded, yours by the hour.",
+        "address": "бул. \"Найчо Цанов\" 5, гр. Пловдив",
         "phone": "+359 88 000 0002",
-        "hours": "06:00–24:00",
-        "amenities": ["Power rack", "Dumbbells to 40 kg", "Functional rig", "Bluetooth sound", "Shower"]
-      },
-      {
-        "id": "trakiya",
-        "name": "MyGym Trakiya",
-        "area": "Trakiya residential district",
-        "description": "Your neighborhood private gym in Trakiya — fully equipped, spotless, and never crowded.",
-        "address": "Тракия, Пловдив",
-        "phone": "+359 88 000 0003",
         "hours": "24/7",
         "amenities": ["Power rack", "Full dumbbell set", "Cardio", "Bluetooth sound", "Shower", "Free parking"]
+      },
+      {
+        "id": "third",
+        "name": "New location",
+        "area": "Opening soon in Plovdiv — follow us for the launch.",
+        "description": "",
+        "address": "",
+        "phone": "",
+        "hours": "",
+        "amenities": []
       }
     ]
   },
   "reviews": {
     "title": "What our members say",
-    "subtitle": "Real feedback from people who train privately at MyGym.",
-    "memberLabel": "Verified member",
-    "items": [
-      { "text": "Great atmosphere and top-notch equipment! Highly recommend.", "rating": 5 },
-      { "text": "The cleanest gym I've ever been to. Friendly staff too.", "rating": 5 },
-      { "text": "Love the booking system, it's never too crowded.", "rating": 5 },
-      { "text": "Excellent trainers and a very motivating environment.", "rating": 5 },
-      { "text": "Top tier facilities. The community here is fantastic.", "rating": 5 },
-      { "text": "Super convenient location and always tidy.", "rating": 4 },
-      { "text": "The perfect place to focus on my fitness goals.", "rating": 5 },
-      { "text": "High-quality machines and great music playlist.", "rating": 5 },
-      { "text": "Staff is incredibly helpful and welcoming.", "rating": 4 },
-      { "text": "Best gym experience in town, hands down.", "rating": 5 },
-      { "text": "A wonderful community and great equipment selection.", "rating": 5 }
-    ]
+    "subtitle": "Real feedback from people who train privately at MyGym."
   },
   "howToBook": {
     "title": "How to Book",

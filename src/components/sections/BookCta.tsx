@@ -2,15 +2,17 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/Reveal";
-import { SOCIAL } from "@/config/nav";
+import { BookButton } from "@/components/BookButton";
 import { IMAGES } from "@/data/images";
 
 /**
- * Home-page call-to-action that replaces the former 3-image gallery
- * (corrections §5, §7): a catchy phrase above a compact orange button that
- * opens the MyGym Instagram page in a new tab. The whole section is backed by a
- * full-bleed gym photo with a dark overlay (replacing the former white
- * background), so the phrase and button read in white over the image.
+ * Home-page call-to-action (corrections §5, §7): a catchy phrase above the
+ * primary "Резервирай" CTA — the focal point of the page, deliberately larger and
+ * heavier than the header's booking button, which opens the global booking modal
+ * (corrections8 §3). The whole section is backed by a full-bleed gym photo with a
+ * dark overlay so the phrase and button read in white over the image. The photo
+ * was shot through a mirror (the "MyGym" wordmark reads backwards), so it is
+ * flipped horizontally to make the logo legible (corrections8 §1).
  */
 export function BookCta() {
   const t = useTranslations("homeCta");
@@ -24,7 +26,9 @@ export function BookCta() {
         aria-hidden
         fill
         sizes="100vw"
-        className="-z-10 object-cover"
+        // Shot through a mirror → flip horizontally so the "MyGym" wordmark in
+        // the photo reads correctly (corrections8 §1).
+        className="-z-10 -scale-x-100 object-cover"
       />
       <div className="absolute inset-0 -z-10 bg-ink/60" aria-hidden />
 
@@ -33,25 +37,14 @@ export function BookCta() {
           <p className="mx-auto max-w-3xl text-3xl font-bold tracking-tight text-surface sm:text-4xl lg:text-5xl">
             {t("phrase")}
           </p>
-          <a
-            href={SOCIAL.instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            // Shape/proportions/design mirror the header's primary "Book" button
-            // (Button variant="primary") for consistency (corrections5 §4): same
-            // rounded-full pill, px-6 py-3, text-sm font-semibold, gap-2, solid
-            // brand. Focus ring is offset against ink here since this CTA sits on
-            // a dark photo backdrop rather than the white surface.
-            className={
-              "mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-brand " +
-              "px-6 py-3 text-sm font-semibold text-surface " +
-              "transition-colors hover:bg-brand-600 focus-visible:outline-none " +
-              "focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2 " +
-              "focus-visible:ring-offset-ink"
-            }
-          >
-            {t("button")}
-          </a>
+          {/* Primary focal CTA (corrections8 §1): deliberately larger and heavier
+              than the header's booking button — more padding, larger text, bolder
+              weight, plus a drop shadow for prominence. The ring offset is against
+              ink since this sits on a dark photo backdrop, not the white surface. */}
+          <BookButton
+            label={t("button")}
+            className="mt-8 px-10 py-5 text-lg font-bold shadow-xl shadow-brand/30 focus-visible:ring-offset-ink sm:text-xl"
+          />
         </Reveal>
       </Container>
     </section>

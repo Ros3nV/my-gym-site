@@ -48,6 +48,34 @@
     }
   }
 
+  /* Lightbox open transition (corrections8 §7): the modal fades in from
+     transparent so opening the gallery eases the dark backdrop + photo in. */
+  .lightbox-fade {
+    animation: lightbox-fade-in 250ms ease forwards;
+  }
+
+  @keyframes lightbox-fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Coming-soon tape edges (corrections8): diagonal orange hazard stripes
+     painted over the white tape band, used as thin strips along the top and
+     bottom edge of each band for a construction barricade-tape look. Orange is
+     the brand hex (#E8772E); the gaps are transparent so the band's white shows
+     through, giving the classic orange/white diagonal stripe. */
+  .tape-stripes {
+    background-image: repeating-linear-gradient(
+      45deg,
+      #e8772e 0 8px,
+      transparent 8px 16px
+    );
+  }
+
   /* Reviews marquee (corrections4 §2): the track holds two copies of the review
      pool, so translating by -50% advances exactly one pool and the loop reads
      as a continuous, seamless horizontal scroll. */
@@ -80,6 +108,9 @@
     animation: none;
   }
   .marquee-track {
+    animation: none;
+  }
+  .lightbox-fade {
     animation: none;
   }
 }

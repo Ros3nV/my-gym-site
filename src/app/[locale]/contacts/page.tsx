@@ -1,10 +1,9 @@
-import Image from "next/image";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Phone, Mail, Instagram, Facebook } from "lucide-react";
 import { Section } from "@/components/ui/Section";
+import { ContactSlideshow } from "@/components/ContactSlideshow";
 import { SOCIAL } from "@/config/nav";
-import { IMAGES } from "@/data/images";
 
 function ContactsContent() {
   const t = useTranslations("contacts");
@@ -72,13 +71,7 @@ function ContactsContent() {
         </div>
 
         <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-ink/10 shadow-sm">
-          <Image
-            src={IMAGES.contact}
-            alt={t("imageAlt")}
-            fill
-            sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
-          />
+          <ContactSlideshow alt={t("imageAlt")} />
         </div>
       </div>
     </Section>

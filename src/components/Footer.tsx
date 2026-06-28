@@ -20,7 +20,14 @@ export function Footer() {
             </p>
           </div>
 
-          <nav className="flex gap-6" aria-label="Footer">
+          {/* Consistent, even spacing that mirrors the header nav's `gap-6`
+              (corrections8 §2). `flex-wrap` + symmetric gap-x/gap-y keeps the
+              spacing uniform when the links wrap to a second row on narrow
+              widths, instead of collapsing unevenly. */}
+          <nav
+            className="flex flex-wrap items-center gap-x-6 gap-y-3"
+            aria-label="Footer"
+          >
             {NAV_LINKS.map((l) => (
               <Link key={l.href} href={l.href} className="text-sm hover:text-brand">
                 {t(l.key)}

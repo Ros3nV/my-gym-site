@@ -1,12 +1,18 @@
 import { LOCATION_IMAGE } from "@/data/images";
 
-export type LocationId = "center" | "kapana" | "trakiya";
+/** Ids of the two live locations — also the keys into the galleries map. */
+export type LocationId = "karshiyaka" | "stochna";
 
 export interface Location {
-  id: LocationId;
-  image: string;
+  /** Stable id; matches the localized entry in messages `locations.items`. */
+  id: string;
+  image?: string;
   /** Plain-text address used to build the keyless Google Maps embed URL. */
-  mapsQuery: string;
+  mapsQuery?: string;
+  /** Gallery key for the lightbox photos (live locations only). */
+  galleryKey?: LocationId;
+  /** Marks an upcoming, not-yet-open location (corrections7 §3). */
+  comingSoon?: boolean;
 }
 
 /**
@@ -14,9 +20,24 @@ export interface Location {
  * messages `locations.items` (Task 004) and are matched to this list by `id`.
  */
 export const LOCATIONS: readonly Location[] = [
-  { id: "center", image: LOCATION_IMAGE.center, mapsQuery: "Отец Паисий, Център, Пловдив" },
-  { id: "kapana", image: LOCATION_IMAGE.kapana, mapsQuery: "Капана, Пловдив" },
-  { id: "trakiya", image: LOCATION_IMAGE.trakiya, mapsQuery: "Тракия, Пловдив" },
+  {
+    id: "karshiyaka",
+    image: LOCATION_IMAGE.karshiyaka,
+    mapsQuery: 'Ул. "Победа" 9, гр. Пловдив',
+    galleryKey: "karshiyaka",
+  },
+  {
+    id: "stochna",
+    image: LOCATION_IMAGE.stochna,
+    mapsQuery: 'бул. "Найчо Цанов" 5, гр. Пловдив',
+    galleryKey: "stochna",
+  },
+  // Third location (corrections7 §3): upcoming, non-interactive "Coming Soon"
+  // card. No image/map/gallery — it renders its own muted red/black panel.
+  {
+    id: "third",
+    comingSoon: true,
+  },
 ] as const;
 
 export function mapsEmbedUrl(query: string): string {
