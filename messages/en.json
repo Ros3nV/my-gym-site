@@ -1,6 +1,6 @@
 {
   "common": {
-    "bookCta": "Book Your Private Session",
+    "bookCta": "Book a Session",
     "bookShort": "Book",
     "exploreLocations": "Explore Locations",
     "bookThisLocation": "Book this location"
@@ -16,8 +16,8 @@
     "closeMenu": "Close menu"
   },
   "hero": {
-    "title": "Your gym. Yours alone.",
-    "subtitle": "Rent a fully private, automated gym by the hour — no crowds, no waiting, no membership.",
+    "title": "Book the whole gym for yourself.",
+    "subtitle": "",
     "imageAlt": "Bright private power-rack room with mirror and dumbbells"
   },
   "heroAlt": {
@@ -29,19 +29,21 @@
     "imageAlt": "Premium lounge with ring chandelier and designer chairs",
     "bullets": [
       "100% privacy",
+      "Bring friends for free",
       "No crowds, no equipment queues",
-      "Premium hygiene between sessions",
-      "Control your own music & atmosphere",
-      "Seamless automated access (24/7)"
+      "New German-made equipment",
+      "Automated access (24/7)"
     ]
   },
   "howItWorks": {
     "title": "How it works",
     "imageAlt": "Frosted glass etched \"PRIVATE 24/7\"",
     "steps": [
-      { "title": "Book a slot", "body": "Choose your gym, date and time online." },
-      { "title": "Get your access code", "body": "A unique PIN arrives for your session." },
-      { "title": "Train privately", "body": "The whole space is yours; lock up and leave when done." }
+      { "title": "Choose a location", "body": "" },
+      { "title": "Register and choose a package", "body": "" },
+      { "title": "Download “Octiv” from the App Store or Google Play and sign in", "body": "" },
+      { "title": "Choose a day and book a time", "body": "" },
+      { "title": "Train in peace — solo or with company", "body": "" }
     ]
   },
   "homeCta": {
@@ -59,7 +61,7 @@
   },
   "locations": {
     "title": "Our Plovdiv locations",
-    "subtitle": "Two private studios across the city — yours by the hour.",
+    "subtitle": "",
     "labels": {
       "address": "Address",
       "phone": "Phone",
@@ -82,7 +84,7 @@
         "address": "Ул. \"Победа\" 9, гр. Пловдив",
         "phone": "+359 88 000 0001",
         "hours": "24/7",
-        "amenities": ["Power rack", "Dumbbells to 50 kg", "Cardio", "Bluetooth sound", "Shower", "Free parking"]
+        "amenities": ["Abductor & Adductor", "Leg Curl & Leg Extension", "Calf Raise", "Treadmill", "Power Rack", "Bench Press", "Dumbbells to 40 kg", "Cross-trainer", "Cable Station", "Dip & Pull-up Station", "Punching Bag", "Ab Bench"]
       },
       {
         "id": "stochna",
@@ -92,7 +94,7 @@
         "address": "бул. \"Найчо Цанов\" 5, гр. Пловдив",
         "phone": "+359 88 000 0002",
         "hours": "24/7",
-        "amenities": ["Power rack", "Full dumbbell set", "Cardio", "Bluetooth sound", "Shower", "Free parking"]
+        "amenities": ["StairMaster", "Smith Machine", "Abductor & Adductor", "Leg Curl & Leg Extension", "Calf Raise", "Treadmill", "Power Rack", "Bench Press", "Dumbbells to 40 kg", "Cross-trainer", "Cable Station", "Dip & Pull-up Station", "Punching Bag", "Ab Bench"]
       },
       {
         "id": "third",
@@ -114,21 +116,22 @@
     "title": "How to Book",
     "intro": "Booking your private session takes just a few steps using the Octiv Fitness app.",
     "steps": [
-      "Download the Octiv Fitness mobile application from the App Store or Google Play Store.",
-      "Open the app and log in or create your personal member account.",
-      "Search for our gym within the app's facility directory.",
-      "Choose your preferred training session, date, and time slot.",
-      "Confirm your reservation and arrive ready for your workout!"
+      { "title": "Choose a location", "body": "" },
+      { "title": "Register and choose a package", "body": "" },
+      { "title": "Download “Octiv” from the App Store or Google Play and sign in", "body": "" },
+      { "title": "Choose a day and book a time", "body": "" },
+      { "title": "Train in peace — solo or with company", "body": "" }
     ]
   },
   "faq": {
     "title": "Rules & FAQ",
     "rulesHeading": "Gym Rules",
     "rules": [
-      "Always use a clean towel on the equipment during exercises.",
-      "Re-rack all weights and return equipment to its proper place after use.",
-      "Proper athletic footwear and apparel must be worn at all times.",
-      "Respect other members and maintain an appropriate noise level."
+      "Always arrive on time for your entry.",
+      "Always come in clean shoes. If you can't, we've got you covered — we keep shoe covers just for that.",
+      "Keep the space clean and re-rack the weights.",
+      "A towel is strongly recommended.",
+      "Leave on time."
     ],
     "faqHeading": "Frequently asked questions",
     "items": [
@@ -137,6 +140,90 @@
       { "q": "How is hygiene maintained between sessions?", "a": "We schedule a cleaning and sanitization window between every booking, so the equipment and floor are professionally wiped down and ready before you arrive." },
       { "q": "What equipment is available?", "a": "Each private gym includes a power rack and barbell, a full dumbbell set, benches, cardio machines, kettlebells and functional accessories — everything for a complete strength or conditioning workout." },
       { "q": "Can I play my own music?", "a": "Absolutely. Every space has an integrated Bluetooth sound system — connect your phone and set the atmosphere exactly how you like it." }
+    ]
+  },
+  "terms": {
+    "heading": "MyGym Terms of Use",
+    "sections": [
+      {
+        "title": "I. GENERAL PROVISIONS",
+        "items": [
+          "MyGym provides a service for self-service, temporary use of a recreational gym intended for physical activity, individual and group training and other recreational activities, via an online reservation system.",
+          "By making a reservation, the client declares that they have read, understood and accept these Terms of Use.",
+          "MyGym reserves the right to amend and supplement these terms at any time, with the current version published on the official website."
+        ]
+      },
+      {
+        "title": "II. RESERVATIONS AND ACCESS",
+        "items": [
+          "Reservations are made in advance through the online platform.",
+          "Access to the recreational gym is provided via an electronic code or a digital unlocking system, valid only for the reserved time interval.",
+          "The minimum age for use is 18 years, or 16 years with written or electronically sent consent from a parent or guardian.",
+          "A delay on the client's part does not extend the reservation time.",
+          "The client is obliged to ensure that, after their group has entered, the entrance door is tightly closed. Admitting persons who are not part of the reservation is prohibited.",
+          "Sharing the access code or providing it to third parties is prohibited.",
+          "The maximum number of people in the gym is limited in accordance with the published rules."
+        ]
+      },
+      {
+        "title": "III. PAYMENT",
+        "items": [
+          "Payment is made entirely online before the start of the reserved period.",
+          "An unpaid reservation does not guarantee access to the gym.",
+          "Any change in prices by MyGym does not affect already purchased packages and confirmed reservations."
+        ]
+      },
+      {
+        "title": "IV. CANCELLATION AND REFUNDS",
+        "items": [
+          "Cancelling a reservation is possible within the period specified in the reservation platform.",
+          "In case of a no-show at the reserved time, the amount is not refunded.",
+          "In the event of a technical problem caused by MyGym, the client is entitled to reschedule the reservation or to a refund of the amount paid."
+        ]
+      },
+      {
+        "title": "V. CODE OF CONDUCT",
+        "items": [
+          "The use of alcohol, narcotics and other intoxicating substances on the premises is prohibited.",
+          "Clients are obliged to use the equipment as intended and with due care.",
+          "After the reserved period expires, the gym must be left in the condition it was in when access was granted.",
+          "Improper use, dismantling and damaging of the entrusted equipment and inventory is prohibited.",
+          "Use of the gym is permitted only with clean, closed sports shoes that have not been used outdoors, or with the shoe covers provided by MyGym.",
+          "Smoking (incl. vapes and e-cigarettes) in the gym is strictly prohibited.",
+          "The client is obliged to clean the used equipment and touch surfaces after finishing their workout, using the disinfectants provided on the premises."
+        ]
+      },
+      {
+        "title": "VI. LIABILITY",
+        "items": [
+          "MyGym is a self-service facility. The presence of an instructor is possible only for a personal training session requested and confirmed in advance. Outside of these cases, use of the equipment is entirely at the client's own risk.",
+          "By making a reservation, the client confirms that they are familiar with how the fitness equipment works and declares that they are physically and mentally healthy. MyGym is not liable for injuries, deterioration of health or death occurring on the premises.",
+          "MyGym is not liable for lost, forgotten or stolen personal belongings.",
+          "In case of established material damage, the client owes full compensation for the damage caused.",
+          "The facility is equipped with a first-aid kit in a visible location. In case of an incident, the client is obliged to immediately notify Emergency Services on 112 or MyGym on the contact number provided."
+        ]
+      },
+      {
+        "title": "VII. VIDEO SURVEILLANCE",
+        "items": [
+          "The facility may be under video surveillance for the purposes of security, access control and property protection.",
+          "The collection and processing of data are carried out in accordance with applicable law."
+        ]
+      },
+      {
+        "title": "VIII. TERMINATION OF ACCESS",
+        "items": [
+          "In case of a breach of these terms, MyGym has the right to refuse or terminate access to the service without refunding amounts paid.",
+          "In case of violations, the client's account may be deactivated."
+        ]
+      },
+      {
+        "title": "IX. PERSONAL DATA PROTECTION",
+        "items": [
+          "Personal data is processed in accordance with Regulation (EU) 2016/679 (GDPR) and applicable Bulgarian law.",
+          "The data is used solely for the purposes of providing the service, security and the legitimate interests of MyGym."
+        ]
+      }
     ]
   },
   "contacts": {
@@ -149,13 +236,13 @@
       "instagram": "Instagram",
       "facebook": "Facebook"
     },
-    "phone": "+359 88 123 4567",
-    "email": "hello@mygym.bg",
+    "phone": "+359 895 580 559",
+    "email": "mygymbulgaria@gmail.com",
     "address": "23 Otets Paisiy St, Plovdiv 4000, Bulgaria",
     "imageAlt": "Premium MyGym private studio interior"
   },
   "footer": {
-    "tagline": "MyGym — private automated fitness in Plovdiv.",
+    "tagline": "MyGym — the first private gym in Bulgaria.",
     "rights": "All rights reserved.",
     "social": { "instagram": "Instagram", "facebook": "Facebook" }
   },

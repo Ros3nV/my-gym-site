@@ -2,9 +2,11 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 
+type Step = { title: string; body: string };
+
 function HowToBookContent() {
   const t = useTranslations("howToBook");
-  const steps = t.raw("steps") as string[];
+  const steps = t.raw("steps") as Step[];
 
   return (
     <Section containerClassName="max-w-3xl">
@@ -20,7 +22,10 @@ function HowToBookContent() {
             >
               {i + 1}
             </span>
-            <p className="pt-2 text-ink-soft">{step}</p>
+            <div className="pt-2">
+              <p className="font-semibold text-ink">{step.title}</p>
+              {step.body ? <p className="mt-1 text-ink-soft">{step.body}</p> : null}
+            </div>
           </li>
         ))}
       </ol>

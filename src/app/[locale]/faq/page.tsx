@@ -3,11 +3,14 @@ import { useTranslations } from "next-intl";
 import { Check } from "lucide-react";
 import { Section } from "@/components/ui/Section";
 import { Accordion, type AccordionItem } from "@/components/Accordion";
+import { TermsAccordion, type TermsSection } from "@/components/TermsAccordion";
 
 function FaqContent() {
   const t = useTranslations("faq");
+  const tTerms = useTranslations("terms");
   const rules = t.raw("rules") as string[];
   const items = t.raw("items") as AccordionItem[];
+  const termsSections = tTerms.raw("sections") as TermsSection[];
 
   return (
     <Section containerClassName="max-w-3xl">
@@ -33,6 +36,7 @@ function FaqContent() {
         </h2>
         <div className="mt-4">
           <Accordion items={items} />
+          <TermsAccordion heading={tTerms("heading")} sections={termsSections} />
         </div>
       </section>
     </Section>

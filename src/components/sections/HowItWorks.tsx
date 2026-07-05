@@ -1,10 +1,10 @@
 import Image from "next/image";
-import { CalendarCheck, KeyRound, Dumbbell } from "lucide-react";
+import { MapPin, UserPlus, Smartphone, CalendarCheck, Dumbbell } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
 import { IMAGES } from "@/data/images";
 
-const STEP_ICONS = [CalendarCheck, KeyRound, Dumbbell] as const;
+const STEP_ICONS = [MapPin, UserPlus, Smartphone, CalendarCheck, Dumbbell] as const;
 
 type Step = { title: string; body: string };
 
@@ -35,7 +35,9 @@ export function HowItWorks() {
                     <h3 className="font-semibold">
                       <span className="text-brand-600">{i + 1}.</span> {step.title}
                     </h3>
-                    <p className="mt-1 text-sm text-ink-soft">{step.body}</p>
+                    {step.body ? (
+                      <p className="mt-1 text-sm text-ink-soft">{step.body}</p>
+                    ) : null}
                   </div>
                 </li>
               );

@@ -6,11 +6,12 @@ import { LOCATIONS } from "@/data/locations";
 
 function LocationsContent() {
   const t = useTranslations("locations");
+  const subtitle = t("subtitle");
   return (
     <Section className="py-12 sm:py-14 lg:py-16">
       <header className="max-w-2xl">
         <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">{t("title")}</h1>
-        <p className="mt-3 text-ink-soft">{t("subtitle")}</p>
+        {subtitle ? <p className="mt-3 text-ink-soft">{subtitle}</p> : null}
       </header>
       {/* Compact, evenly-spaced stack so one location reads cleanly per screen
           without unnecessary scrolling (corrections §4). */}

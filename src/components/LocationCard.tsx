@@ -25,58 +25,56 @@ export function LocationCard({ location }: { location: Location }) {
   // visually distinct, non-interactive card in the red/black brand palette,
   // muted so it reads as "not active yet", with a prominent badge.
   if (location.comingSoon) {
-    // "Coming soon" teaser (corrections8): an orange section criss-crossed by
-    // scattered white tape bands (orange text) at widely varied angles and
-    // heights — some near-horizontal so they run straight off the sides, some
-    // steep — like the chaos of a real construction site, each carrying repeated
-    // "Очаквайте скоро". A clean white sign with orange text reads the location
-    // name, centered over the tangle. Static (no animation) and non-interactive.
-    // The tape is decorative (aria-hidden); the accessible name + status live in
-    // the centered sign so screen readers read them once, not per repeat.
-    // Each band carries its own absolute placement + rotation. Two diagonal
-    // bands cross on the left/center; the third sits in the right part of the
-    // card and runs horizontally, exiting off the right edge.
-    const BANDS = [
-      "left-1/2 top-[22%] w-[260%] -translate-x-1/2 -translate-y-1/2 -rotate-[24deg]",
-      "left-1/2 top-[66%] w-[260%] -translate-x-1/2 -translate-y-1/2 rotate-[15deg]",
-      "right-[-12%] top-[44%] w-[62%] -translate-y-1/2 rotate-0",
+    // "Coming soon" teaser (Nova-lokacia design): a solid orange panel densely
+    // tiled with a faded "Очаквайте скоро" watermark that bleeds off every edge —
+    // each row repeats the phrase well past the card width and is nudged left by a
+    // varying amount, so phrases are clipped mid-word at the sides; the whole stack
+    // starts above the top edge so the first and last rows are cut off too, as if
+    // the pattern continued beyond the screen. The location name sits centered on
+    // top in bold white italic at a slight tilt. Static and non-interactive.
+    // The watermark is decorative (aria-hidden); the accessible name + status live
+    // in an sr-only line so screen readers read them once, not per repeat.
+    const WATERMARK_ROWS = 14;
+    const WATERMARK_REPEAT = 6;
+    const ROW_SHIFTS = [
+      "-translate-x-6",
+      "-translate-x-24",
+      "-translate-x-16",
+      "-translate-x-32",
     ];
+    const rowText = Array.from({ length: WATERMARK_REPEAT }, () =>
+      t("labels.comingSoon")
+    ).join(" ");
 
     return (
       <article className="relative min-h-[340px] overflow-hidden rounded-3xl bg-brand text-surface shadow-md sm:min-h-[380px]">
-        {BANDS.map((band, b) => (
-          <div
-            key={b}
-            aria-hidden
-            className={`pointer-events-none absolute ${band} overflow-hidden bg-surface shadow-md`}
-          >
-            {/* Striped top edge. */}
-            <div className="tape-stripes h-2 w-full" />
-            <div className="flex items-center justify-center gap-6 whitespace-nowrap py-1.5 text-sm font-extrabold uppercase tracking-[0.25em] text-brand">
-              {Array.from({ length: 18 }, (_, i) => (
-                <span key={i} className="flex items-center gap-6">
-                  {t("labels.comingSoon")}
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand/50" />
-                </span>
-              ))}
-            </div>
-            {/* Striped bottom edge. */}
-            <div className="tape-stripes h-2 w-full" />
-          </div>
-        ))}
-
-        {/* Centered sign sitting on top of the tangle of tape. */}
-        <div className="absolute inset-0 flex items-center justify-center p-6">
-          <div className="max-w-sm rounded-2xl bg-surface px-6 py-5 text-center shadow-2xl ring-1 ring-ink/10 sm:px-9 sm:py-6">
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-brand">
-              {t("labels.comingSoon")}
-            </span>
-            <h2 className="mt-2 text-2xl font-bold tracking-tight text-brand sm:text-3xl">
-              {data.name}
-            </h2>
-            <p className="mx-auto mt-2 max-w-xs text-sm text-ink-soft">{data.area}</p>
+        {/* Tiled watermark background, bleeding off all four edges. */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -left-10 -right-10 -top-6 flex flex-col gap-2">
+            {Array.from({ length: WATERMARK_ROWS }, (_, r) => (
+              <div
+                key={r}
+                className={`whitespace-nowrap text-2xl font-extrabold italic uppercase leading-none tracking-tight text-white/20 sm:text-3xl ${
+                  ROW_SHIFTS[r % ROW_SHIFTS.length]
+                }`}
+              >
+                {rowText}
+              </div>
+            ))}
           </div>
         </div>
+
+        {/* Centered location name, slightly tilted. */}
+        <div className="absolute inset-0 flex items-center justify-center p-6">
+          <h2 className="-rotate-6 text-center text-4xl font-extrabold italic uppercase tracking-tight text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.35)] sm:text-5xl">
+            {data.name}
+          </h2>
+        </div>
+
+        {/* Screen-reader context (conveyed visually by the design above). */}
+        <span className="sr-only">
+          {t("labels.comingSoon")} — {data.area}
+        </span>
       </article>
     );
   }
