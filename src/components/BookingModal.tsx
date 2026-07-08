@@ -57,9 +57,8 @@ export function BookingModal({ onClose }: { onClose: () => void }) {
       onClick={onClose}
       className="lightbox-fade fixed inset-0 z-50 flex flex-col bg-black/80 backdrop-blur-sm"
     >
-      {/* Top bar: title + close. */}
-      <div className="flex items-center justify-between p-4 text-white">
-        <span className="text-base font-semibold">{t("title")}</span>
+      {/* Top bar: close only. */}
+      <div className="flex items-center justify-end p-4 text-white">
         <button
           type="button"
           aria-label={t("close")}

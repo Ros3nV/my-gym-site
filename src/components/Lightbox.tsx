@@ -81,9 +81,8 @@ export function Lightbox({
       className="lightbox-fade fixed inset-0 z-50 flex flex-col bg-black/80 backdrop-blur-sm"
       onClick={onClose}
     >
-      {/* Top bar: counter + close. */}
-      <div className="flex items-center justify-between p-4 text-white">
-        <span className="text-sm font-medium tabular-nums">{counter(index)}</span>
+      {/* Top bar: close only (position counter kept for a11y labels below). */}
+      <div className="flex items-center justify-end p-4 text-white">
         <button
           type="button"
           aria-label={t("labels.galleryClose")}

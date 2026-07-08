@@ -7,8 +7,8 @@ import { LOCATION_IMAGE } from "@/data/images";
  * Fitness sign-up portal so clicking a block opens that location's booking flow
  * in a new tab. Localized block labels live in messages under
  * `booking.locations.<id>`. `coverPosition` optionally overrides the crop focal
- * point for this modal's wide, short blocks — Сточна is raised toward the top so
- * the MyGym sign stays visible.
+ * point for these wide, short blocks — Сточна is nudged up so the MyGym sign
+ * sits at the top of the frame with the entrance just below it.
  */
 export const BOOKING_LOCATIONS = [
   {
@@ -20,7 +20,7 @@ export const BOOKING_LOCATIONS = [
   {
     id: "stochna",
     cover: LOCATION_IMAGE.stochna,
-    coverPosition: "object-[35%_top]",
+    coverPosition: "object-[35%_30%]",
     url: "https://app.octivfitness.com/widget/sign-up?publicToken=979d3ac92b95fd3ee343f1d86ba50dd943e60a38",
   },
 ] as const;
