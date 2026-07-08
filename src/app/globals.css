@@ -5,6 +5,14 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Fluid root size for cross-monitor consistency. The whole design is sized
+       in rem (type, spacing, max-widths), so scaling the root scales everything
+       together and the layout keeps the same share of the screen on any monitor.
+       Tuned so screens up to ~1920px stay at the current 16px (nothing changes
+       for a 1920×1080 laptop), while larger/higher-res monitors grow the UI up
+       to 28px instead of leaving the content looking tiny. Browser zoom still
+       works normally on top of this. */
+    font-size: clamp(16px, 0.78vw + 1px, 28px);
   }
   body {
     @apply bg-surface text-ink antialiased;

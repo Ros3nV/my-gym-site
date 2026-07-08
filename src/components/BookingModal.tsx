@@ -6,6 +6,8 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { X } from "lucide-react";
 import { BOOKING_LOCATIONS } from "@/config/booking";
+import { imagePosition } from "@/data/images";
+import { cn } from "@/lib/cn";
 
 /**
  * Global booking modal (corrections8 §3). Triggered by every "Резервирай" button
@@ -91,7 +93,10 @@ export function BookingModal({ onClose }: { onClose: () => void }) {
                   alt=""
                   fill
                   sizes="(max-width: 768px) 100vw, 768px"
-                  className="object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+                  className={cn(
+                    "object-cover transition-transform duration-300 ease-out group-hover:scale-105",
+                    loc.coverPosition || imagePosition(loc.cover)
+                  )}
                 />
                 {/* Dark gradient so the white name stays legible over any photo. */}
                 <span

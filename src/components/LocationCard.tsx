@@ -47,7 +47,7 @@ export function LocationCard({ location }: { location: Location }) {
     ).join(" ");
 
     return (
-      <article className="relative min-h-[340px] overflow-hidden rounded-3xl bg-brand text-surface shadow-md sm:min-h-[380px]">
+      <article className="relative min-h-[21.25rem] overflow-hidden rounded-3xl bg-brand text-surface shadow-md sm:min-h-[23.75rem]">
         {/* Tiled watermark background, bleeding off all four edges. */}
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           <div className="absolute -left-10 -right-10 -top-6 flex flex-col gap-2">
@@ -118,13 +118,13 @@ export function LocationCard({ location }: { location: Location }) {
 
         {/* Google Map (right) — fills the full card height so its bottom edge
             lines up with the equipment list on the left (corrections3 §3). */}
-        <div className="min-h-[220px]">
+        <div className="min-h-[13.75rem]">
           <iframe
             src={mapsEmbedUrl(location.mapsQuery ?? data.address)}
             title={t("labels.mapTitle", { name: data.name })}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="h-full min-h-[220px] w-full border-0"
+            className="h-full min-h-[13.75rem] w-full border-0"
           />
         </div>
       </div>

@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { IMAGES } from "@/data/images";
+import { IMAGES, imagePosition } from "@/data/images";
+import { cn } from "@/lib/cn";
 
 const SLIDE_INTERVAL_MS = 3000;
 
@@ -40,10 +41,11 @@ export function ContactSlideshow({ alt }: { alt: string }) {
           fill
           priority={i === 0}
           sizes="(max-width: 768px) 100vw, 50vw"
-          className={
-            "object-cover transition-opacity duration-1000 ease-in-out " +
-            (i === active ? "opacity-100" : "opacity-0")
-          }
+          className={cn(
+            "object-cover transition-opacity duration-1000 ease-in-out",
+            imagePosition(src),
+            i === active ? "opacity-100" : "opacity-0"
+          )}
         />
       ))}
     </>
