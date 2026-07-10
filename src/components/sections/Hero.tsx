@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Button } from "@/components/ui/Button";
+import { BookButton } from "@/components/BookButton";
 import { Container } from "@/components/ui/Container";
 import { IMAGES } from "@/data/images";
 
@@ -33,9 +34,9 @@ export function Hero() {
             <p className="mt-6 text-lg text-ink-soft sm:text-xl">{subtitle}</p>
           ) : null}
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href="/how-to-book" variant="primary">
-              {tc("bookCta")}
-            </Button>
+            {/* Opens the global booking modal like every other "Резервирай"
+                button (corrections8 §3), instead of routing to how-to-book. */}
+            <BookButton variant="primary" label={tc("bookCta")} />
             <Button href="/locations" variant="secondary">
               {tc("exploreLocations")}
             </Button>

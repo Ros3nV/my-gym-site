@@ -1,11 +1,13 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Section } from "@/components/ui/Section";
+import { BookButton } from "@/components/BookButton";
 
 type Step = { title: string; body: string };
 
 function HowToBookContent() {
   const t = useTranslations("howToBook");
+  const tc = useTranslations("common");
   const steps = t.raw("steps") as Step[];
 
   return (
@@ -29,6 +31,16 @@ function HowToBookContent() {
           </li>
         ))}
       </ol>
+
+      {/* After walking through the steps, offer the same booking entry point as
+          the rest of the site (corrections8 §3): opens the global booking modal. */}
+      <div className="mt-12 flex justify-center">
+        <BookButton
+          variant="primary"
+          label={tc("bookCta")}
+          className="px-8 py-4 text-lg font-bold"
+        />
+      </div>
     </Section>
   );
 }
