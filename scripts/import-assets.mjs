@@ -5,7 +5,8 @@
 //
 //   1. Reviews   — ../reviews/<folder>/New Text Document.txt (+ avatar image)
 //                  → public/images/reviews/* and src/data/reviews.ts
-//   2. Galleries — ../Location 1 - Кършияка/*, ../Location 2 - Сточна гара/*
+//   2. Galleries — ../Location 1 - Кършияка/*, ../Location 2 - Сточна гара/*,
+//                  ../Location 3 - Русе/*
 //                  → public/images/locations/<key>/* and src/data/galleries.ts
 //
 // Run from the Site/ directory with:  node scripts/import-assets.mjs
@@ -182,6 +183,7 @@ async function importReviews() {
 const GALLERY_SOURCES = [
   { key: "karshiyaka", dir: "Location 1 - Кършияка" },
   { key: "stochna", dir: "Location 2 - Сточна гара" },
+  { key: "ruse", dir: "Location 3 - Русе" },
 ];
 
 async function importGalleries() {

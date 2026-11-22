@@ -2,17 +2,15 @@
 
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { X } from "lucide-react";
 import { BOOKING_LOCATIONS } from "@/config/booking";
-import { imagePosition } from "@/data/images";
-import { cn } from "@/lib/cn";
+import { CoverImage } from "@/components/CoverImage";
 
 /**
  * Global booking modal (corrections8 §3). Triggered by every "Резервирай" button
  * (header + home CTA), it dims the page behind the same `bg-black/80` backdrop as
- * the {@link Lightbox} and stacks the two live locations vertically. Each block
+ * the {@link Lightbox} and stacks the live locations vertically. Each block
  * uses the location's cover photo as background with its name centered in crisp
  * white over a dark gradient, gently zooms (`scale-105`) on hover, and is wrapped
  * in an anchor to that location's Octiv Fitness sign-up portal (new tab).
@@ -87,15 +85,11 @@ export function BookingModal({ onClose }: { onClose: () => void }) {
                 aria-label={name}
                 className="group relative block h-44 w-full overflow-hidden rounded-2xl ring-1 ring-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand sm:h-56"
               >
-                <Image
+                <CoverImage
                   src={loc.cover}
                   alt=""
-                  fill
                   sizes="(max-width: 768px) 100vw, 768px"
-                  className={cn(
-                    "object-cover transition-transform duration-300 ease-out group-hover:scale-105",
-                    loc.coverPosition || imagePosition(loc.cover)
-                  )}
+                  position={loc.coverPosition}
                 />
                 {/* Dark gradient so the white name stays legible over any photo. */}
                 <span

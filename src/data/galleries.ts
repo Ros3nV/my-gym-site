@@ -28,5 +28,14 @@ export const GALLERIES: Record<LocationId, readonly string[]> = {
     "/images/locations/stochna/08.jpg",
     "/images/locations/stochna/09.jpg",
     "/images/locations/stochna/10.jpg"
+  ],
+  "ruse": [
+    "/images/locations/ruse/01.jpg",
+    "/images/locations/ruse/02.jpg",
+    "/images/locations/ruse/03.jpg",
+    "/images/locations/ruse/04.jpg",
+    "/images/locations/ruse/05.jpg",
+    "/images/locations/ruse/06.jpg",
+    "/images/locations/ruse/07.jpg"
   ]
 } as const;

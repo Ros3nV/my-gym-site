@@ -1,12 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Images } from "lucide-react";
 import { Lightbox } from "@/components/Lightbox";
-import { imagePosition } from "@/data/images";
-import { cn } from "@/lib/cn";
+import { CoverImage } from "@/components/CoverImage";
 
 /**
  * Clickable location preview (corrections7 §2). The card's preview image becomes
@@ -36,17 +34,7 @@ export function LocationGallery({
         aria-label={`${triggerLabel} — ${name}`}
         className="group relative block h-48 w-full overflow-hidden rounded-2xl sm:h-56"
       >
-        <Image
-          src={cover}
-          alt={name}
-          fill
-          loading="lazy"
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className={cn(
-            "object-cover transition-transform duration-300 ease-out group-hover:scale-105",
-            imagePosition(cover)
-          )}
-        />
+        <CoverImage src={cover} alt={name} sizes="(max-width: 768px) 100vw, 50vw" />
         {/* Dark overlay + "View Gallery" cue, fading in on hover/focus. */}
         <span className="absolute inset-0 flex items-center justify-center gap-2 bg-black/0 text-white opacity-0 transition duration-300 group-hover:bg-black/50 group-hover:opacity-100 group-focus-visible:bg-black/50 group-focus-visible:opacity-100">
           <Images size={18} aria-hidden />

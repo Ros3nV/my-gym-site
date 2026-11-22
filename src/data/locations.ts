@@ -1,7 +1,7 @@
 import { LOCATION_IMAGE } from "@/data/images";
 
-/** Ids of the two live locations — also the keys into the galleries map. */
-export type LocationId = "karshiyaka" | "stochna";
+/** Ids of the live locations — also the keys into the galleries map. */
+export type LocationId = "karshiyaka" | "stochna" | "ruse";
 
 export interface Location {
   /** Stable id; matches the localized entry in messages `locations.items`. */
@@ -32,11 +32,11 @@ export const LOCATIONS: readonly Location[] = [
     mapsQuery: 'бул. "Найчо Цанов" 5, гр. Пловдив',
     galleryKey: "stochna",
   },
-  // Third location (corrections7 §3): upcoming, non-interactive "Coming Soon"
-  // card. No image/map/gallery — it renders its own muted red/black panel.
   {
-    id: "third",
-    comingSoon: true,
+    id: "ruse",
+    image: LOCATION_IMAGE.ruse,
+    mapsQuery: 'бул. "Васил Левски" 20, гр. Русе',
+    galleryKey: "ruse",
   },
 ] as const;
 

@@ -56,11 +56,12 @@
     "close": "Close",
     "locations": {
       "stochna": "Stochna Gara",
-      "karshiyaka": "Karshiyaka"
+      "karshiyaka": "Karshiyaka",
+      "ruse": "Ruse"
     }
   },
   "locations": {
-    "title": "Our Plovdiv locations",
+    "title": "Our locations",
     "subtitle": "",
     "labels": {
       "address": "Address",
@@ -97,14 +98,22 @@
         "amenities": ["StairMaster", "Smith Machine", "Abductor & Adductor", "Leg Curl & Leg Extension", "Calf Raise", "Treadmill", "Power Rack", "Bench Press", "Dumbbells to 40 kg", "Cross-trainer", "Cable Station", "Dip & Pull-up Station", "Punching Bag", "Ab Bench"]
       },
       {
-        "id": "third",
-        "name": "New location",
-        "area": "Opening soon in Plovdiv — follow us for the launch.",
-        "description": "",
-        "address": "",
-        "phone": "",
-        "hours": "",
-        "amenities": []
+        "id": "ruse",
+        "name": "MyGym Ruse",
+        "area": "Bul. \"Vasil Levski\" 20, Ruse",
+        "description": "Your private gym in Ruse — everything you need for a full workout, all yours by the hour.",
+        "address": "бул. \"Васил Левски\" 20, гр. Русе",
+        "phone": "+359 88 000 0003",
+        "hours": "24/7",
+        "amenities": [
+          "Leg Curl & Leg Extension",
+          "Treadmill",
+          "Power Rack",
+          "Bench Press",
+          "Dumbbells to 30 kg",
+          "Cable Station",
+          "Dip & Pull-up Station"
+        ]
       }
     ]
   },
@@ -247,7 +256,7 @@
     "social": { "instagram": "Instagram", "facebook": "Facebook" }
   },
   "seo": {
-    "title": "MyGym — Private Automated Gym Rental in Plovdiv",
-    "description": "Rent a fully private, automated gym by the hour in Plovdiv. No crowds, no membership — book a slot, unlock with a code, train alone."
+    "title": "MyGym — The First Private Gym Studios in Bulgaria",
+    "description": "A private gym studio for rent, entirely yours. Book online, unlock with a code and train with no crowds — alone or with a friend."
   }
 }

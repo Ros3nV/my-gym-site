@@ -1,9 +1,9 @@
 import { LOCATION_IMAGE } from "@/data/images";
 
 /**
- * The two live locations offered in the global "Резервирай" booking modal
- * (corrections8 §3), in display order (stacked top→bottom: Кършияка first, then
- * Сточна гара). Each entry pairs the location's cover photo with its Octiv
+ * The live locations offered in the global "Резервирай" booking modal
+ * (corrections8 §3), in display order (stacked top→bottom: Кършияка, Сточна
+ * гара, Русе). Each entry pairs the location's cover photo with its Octiv
  * Fitness sign-up portal so clicking a block opens that location's booking flow
  * in a new tab. Localized block labels live in messages under
  * `booking.locations.<id>`. `coverPosition` optionally overrides the crop focal
@@ -22,5 +22,11 @@ export const BOOKING_LOCATIONS = [
     cover: LOCATION_IMAGE.stochna,
     coverPosition: "object-[35%_30%]",
     url: "https://app.octivfitness.com/widget/sign-up?publicToken=979d3ac92b95fd3ee343f1d86ba50dd943e60a38",
+  },
+  {
+    id: "ruse",
+    cover: LOCATION_IMAGE.ruse,
+    coverPosition: "",
+    url: "https://app.octivfitness.com/widget/sign-up?publicToken=e6c494f8e8c42c208206b633eb17b1bcfd63ca69",
   },
 ] as const;

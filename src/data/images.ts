@@ -14,12 +14,14 @@ export const IMAGES = {
   // Location-card preview / cover.
   locationKarshiyaka: "/images/locations/karshiyaka/10.jpg", // Кършияка cover
   locationStochna: "/images/stochna-storefront-2.jpg", // Сточна гара cover (storefront photo)
+  locationRuse: "/images/locations/ruse/07.jpg", // Русе cover (last gallery photo — the entrance)
 } as const;
 
-/** Map a location id (corrections6 §1: exactly 2 locations) to its mapped photo. */
-export const LOCATION_IMAGE: Record<"karshiyaka" | "stochna", string> = {
+/** Map a location id to its mapped cover photo. */
+export const LOCATION_IMAGE: Record<"karshiyaka" | "stochna" | "ruse", string> = {
   karshiyaka: IMAGES.locationKarshiyaka,
   stochna: IMAGES.locationStochna,
+  ruse: IMAGES.locationRuse,
 };
 
 /**
@@ -31,8 +33,28 @@ export const LOCATION_IMAGE: Record<"karshiyaka" | "stochna", string> = {
  */
 const IMAGE_POSITION: Record<string, string> = {
   [IMAGES.locationStochna]: "object-[35%_center]",
+  // Русе entrance is a tall portrait shot; bias the crop upward so the whole
+  // MY GYM sign stays in frame above the doorway.
+  [IMAGES.locationRuse]: "object-[center_30%]",
 };
 
 export function imagePosition(src: string): string {
   return IMAGE_POSITION[src] ?? "";
+}
+
+/**
+ * Optional "zoomed-out" framing for portrait photos shown in wide preview
+ * strips. A plain `object-cover` crop of a tall photo into a wide strip only
+ * shows a thin horizontal slice; mapped photos are instead drawn into a centred
+ * box of this aspect ratio (revealing more of their height), with a blurred
+ * copy of the same photo filling the strip behind it. Unmapped photos keep the
+ * full-bleed cover crop.
+ */
+const IMAGE_FRAME: Record<string, string> = {
+  // Русе: show the whole MY GYM sign down to the foot of the entrance door.
+  [IMAGES.locationRuse]: "aspect-square",
+};
+
+export function imageFrame(src: string): string | undefined {
+  return IMAGE_FRAME[src];
 }
