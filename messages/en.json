@@ -55,8 +55,8 @@
     "title": "Choose a location",
     "close": "Close",
     "locations": {
-      "stochna": "Stochna Gara",
-      "karshiyaka": "Karshiyaka",
+      "stochna": "Plovdiv Stochna Gara",
+      "karshiyaka": "Plovdiv Karshiyaka",
       "ruse": "Ruse"
     }
   },
@@ -79,7 +79,7 @@
     "items": [
       {
         "id": "karshiyaka",
-        "name": "MyGym Karshiyaka",
+        "name": "MyGym Plovdiv Karshiyaka",
         "area": "Ul. \"Pobeda\" 9, Plovdiv",
         "description": "A private studio in Karshiyaka — premium kit, marble-clean finish, perfect for a focused solo or duo session.",
         "address": "Ул. \"Победа\" 9, гр. Пловдив",
@@ -89,7 +89,7 @@
       },
       {
         "id": "stochna",
-        "name": "MyGym Stochna Gara",
+        "name": "MyGym Plovdiv Stochna Gara",
         "area": "Bul. \"Naycho Tsanov\" 5, Plovdiv",
         "description": "Your private gym by Stochna Gara — fully equipped, spotless, and never crowded, yours by the hour.",
         "address": "бул. \"Найчо Цанов\" 5, гр. Пловдив",
@@ -106,6 +106,7 @@
         "phone": "+359 88 000 0003",
         "hours": "24/7",
         "amenities": [
+          "StairMaster",
           "Leg Curl & Leg Extension",
           "Treadmill",
           "Power Rack",
