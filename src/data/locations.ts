@@ -7,7 +7,12 @@ export interface Location {
   /** Stable id; matches the localized entry in messages `locations.items`. */
   id: string;
   image?: string;
-  /** Plain-text address used to build the keyless Google Maps embed URL. */
+  /**
+   * Google Maps search used for the keyless embed. Uses the business name as
+   * listed on Google Maps (not the bare address) so the embed opens the actual
+   * MyGym place — name, rating and reviews — instead of an unnamed address pin.
+   * Each query was checked to resolve to the right listing.
+   */
   mapsQuery?: string;
   /** Gallery key for the lightbox photos (live locations only). */
   galleryKey?: LocationId;
@@ -23,19 +28,19 @@ export const LOCATIONS: readonly Location[] = [
   {
     id: "karshiyaka",
     image: LOCATION_IMAGE.karshiyaka,
-    mapsQuery: 'Ул. "Победа" 9, гр. Пловдив',
+    mapsQuery: "MyGym Кършияка, Пловдив",
     galleryKey: "karshiyaka",
   },
   {
     id: "stochna",
     image: LOCATION_IMAGE.stochna,
-    mapsQuery: 'бул. "Найчо Цанов" 5, гр. Пловдив',
+    mapsQuery: "MyGym Сточна Гара, Пловдив",
     galleryKey: "stochna",
   },
   {
     id: "ruse",
     image: LOCATION_IMAGE.ruse,
-    mapsQuery: 'бул. "Васил Левски" 20, гр. Русе',
+    mapsQuery: "MyGym Русе",
     galleryKey: "ruse",
   },
 ] as const;

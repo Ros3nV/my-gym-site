@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import { Check, Phone } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { mapsEmbedUrl, type Location } from "@/data/locations";
 import { GALLERIES } from "@/data/galleries";
@@ -84,8 +84,8 @@ export function LocationCard({ location }: { location: Location }) {
 
   // Per corrections §2: details are always on the left, the Google Map always
   // on the right (they stack on mobile, details first). corrections3 §3: the
-  // line under the name shows only the address, the description / phone / hours
-  // are dropped, and the equipment list is the last block in the left column so
+  // line under the name shows the address (plus the contact phone on its
+  // right), the description / hours are dropped, and the equipment list is the last block in the left column so
   // its bottom edge aligns with the bottom edge of the map (which fills the
   // full card height — see the iframe `h-full` with no max-height cap).
   return (
@@ -100,7 +100,21 @@ export function LocationCard({ location }: { location: Location }) {
 
           <div>
             <h2 className="text-2xl font-bold tracking-tight">{data.name}</h2>
-            <p className="mt-1 text-sm text-ink-soft">{data.area}</p>
+            {/* Address, then the contact phone right beside it (wraps below the
+                address on narrow cards). */}
+            <div className="mt-1 flex flex-wrap items-center gap-x-6 gap-y-1">
+              <p className="text-sm text-ink-soft">{data.area}</p>
+              {data.phone ? (
+                <a
+                  href={`tel:${data.phone.replace(/\s/g, "")}`}
+                  className="inline-flex items-center gap-1.5 whitespace-nowrap text-sm font-medium transition-colors hover:text-brand"
+                >
+                  <Phone className="shrink-0 text-brand" size={16} aria-hidden />
+                  <span className="sr-only">{t("labels.phone")}: </span>
+                  {data.phone}
+                </a>
+              ) : null}
+            </div>
           </div>
 
           <div>
